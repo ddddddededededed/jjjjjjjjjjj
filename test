@@ -7,11 +7,4 @@ local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
 
-Section:NewToggle("ToggleText", "ToggleInfo", function(state)
-    if state then
-        while wait(0.1) do game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Counter"):FireServer() if state then 
-            break
-    else
-        Print("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-    end
-end)
+
