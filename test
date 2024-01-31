@@ -9,3 +9,23 @@ local MainSection = Main:NewSection("Main")
 MainSection:NewButton("InfSub", "Sub", function()
     while wait(0.1) do game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Counter"):FireServer() 
 end)
+
+
+MainSection:NewButton("Deposit", "Deposit 100", function()
+    local args = {
+        [1] = "Deposit",
+        [2] = 100
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild(".Wukashi"):WaitForChild("Events"):WaitForChild("Bank"):FireServer(unpack(args))    
+end)
+
+
+MainSection:NewButton("Withdraw", "Withdraw 100", function()
+    local args = {
+        [1] = "Withdraw",
+        [2] = 100
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild(".Wukashi"):WaitForChild("Events"):WaitForChild("Bank"):FireServer(unpack(args))    
+end)
