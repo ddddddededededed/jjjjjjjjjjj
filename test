@@ -2,9 +2,10 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Wukashi", "Midnight")
 
 
--- Main
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
 
-
+MainSection:NewButton("InfSub", "Sub", function()
+    while wait(0.1) do game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Counter"):FireServer() 
+end)
